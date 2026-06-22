@@ -6,7 +6,7 @@ function Icon({ kind }: { kind: "experience" | "focus" | "infrastructure" }) {
     return (
       <svg
         viewBox="0 0 24 24"
-        className="h-10 w-10 text-white"
+        className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 text-white"
         fill="none"
         stroke="currentColor"
         strokeWidth="1.8"
@@ -21,7 +21,7 @@ function Icon({ kind }: { kind: "experience" | "focus" | "infrastructure" }) {
     return (
       <svg
         viewBox="0 0 24 24"
-        className="h-10 w-10 text-white"
+        className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 text-white"
         fill="none"
         stroke="currentColor"
         strokeWidth="1.8"
@@ -35,7 +35,7 @@ function Icon({ kind }: { kind: "experience" | "focus" | "infrastructure" }) {
   return (
     <svg
       viewBox="0 0 24 24"
-      className="h-10 w-10 text-white"
+      className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 text-white"
       fill="none"
       stroke="currentColor"
       strokeWidth="1.8"
@@ -51,7 +51,7 @@ function Icon({ kind }: { kind: "experience" | "focus" | "infrastructure" }) {
 export default function WhyChooseUsSection() {
   return (
     <section
-      className="bg-[#efefef] py-16 md:py-20"
+      className="bg-[#efefef] py-12 sm:py-14 md:py-20"
       aria-labelledby="why-choose-us-heading"
     >
       <div className="mx-auto max-w-ssa px-6">
@@ -59,24 +59,24 @@ export default function WhyChooseUsSection() {
           id="why-choose-us-heading"
           lines={["POR QUÉ ELEGIRNOS"]}
           centered={true}
-          className="mb-10"
+          className="mb-8 sm:mb-9 md:mb-10"
         />
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-5 sm:gap-6 md:grid-cols-3 md:gap-8">
           {WHY_CHOOSE_US.map((item) => (
             <article
               key={item.id}
-              className="rounded-sm border border-[#e8d7d7] bg-white p-6 shadow-[0_10px_30px_rgba(0,0,0,0.06)]"
+              className="rounded-sm border border-[#e8d7d7] bg-white p-4 sm:p-5 md:p-6 shadow-[0_10px_30px_rgba(0,0,0,0.06)]"
             >
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-md bg-ssa-primary">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-md bg-ssa-primary sm:h-18 sm:w-18 md:h-20 md:w-20">
                 <Icon kind={item.icon} />
               </div>
 
-              <h3 className="mt-6 text-center text-[1.1rem] font-light uppercase leading-snug text-ssa-ink md:text-[1.3rem]">
+              <h3 className="mt-5 text-center text-[1rem] font-light uppercase leading-snug text-ssa-ink sm:text-[1.1rem] md:text-[1.3rem]">
                 {item.title}
               </h3>
 
-              <p className="mt-6 text-[0.95rem] leading-8 text-ssa-ink/70">
+              <p className="mt-4 text-sm leading-6 text-ssa-ink/70 sm:text-[0.95rem] sm:leading-7 md:mt-6 md:leading-8">
                 {item.description}
               </p>
             </article>

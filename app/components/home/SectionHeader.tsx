@@ -18,10 +18,10 @@ export default function SectionHeader({
   return (
     <div
       className={[
-        "grid items-start gap-4 md:gap-6",
+        "grid items-start gap-3 md:gap-6",
         centered
-          ? "grid-cols-[56px_minmax(0,1fr)_56px]"
-          : "grid-cols-[56px_minmax(0,1fr)]",
+          ? "grid-cols-[40px_minmax(0,1fr)_40px] sm:grid-cols-[48px_minmax(0,1fr)_48px] md:grid-cols-[56px_minmax(0,1fr)_56px]"
+          : "grid-cols-[40px_minmax(0,1fr)] sm:grid-cols-[48px_minmax(0,1fr)] md:grid-cols-[56px_minmax(0,1fr)]",
         className,
       ].join(" ")}
     >
@@ -31,14 +31,14 @@ export default function SectionHeader({
           alt=""
           width={40}
           height={40}
-          className="h-10 w-auto object-contain"
+          className="h-8 w-auto object-contain sm:h-9 md:h-10"
         />
       </div>
 
       <div className={centered ? "text-center" : "text-left"}>
         <h2
           id={id}
-          className="font-display text-[2rem] font-light leading-none text-ssa-ink md:text-[2.8rem]"
+          className="font-display text-[1.75rem] font-light leading-none text-ssa-ink sm:text-[2rem] md:text-[2.8rem]"
         >
           {lines.map((line, index) => (
             <span
@@ -55,7 +55,12 @@ export default function SectionHeader({
         </h2>
       </div>
 
-      {centered ? <div aria-hidden="true" className="h-10 w-10" /> : null}
+      {centered ? (
+        <div
+          aria-hidden="true"
+          className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10"
+        />
+      ) : null}
     </div>
   );
 }

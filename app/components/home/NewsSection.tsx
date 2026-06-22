@@ -6,7 +6,7 @@ import SectionHeader from "@/app/components/home/SectionHeader";
 export default function NewsSection() {
   return (
     <section
-      className="bg-[#efefef] py-16 md:py-20"
+      className="bg-[#efefef] py-12 sm:py-14 md:py-20"
       aria-labelledby="news-heading"
     >
       <div className="mx-auto max-w-ssa px-6">
@@ -14,16 +14,16 @@ export default function NewsSection() {
           id="news-heading"
           lines={["NOTICIAS RECIENTES"]}
           centered={true}
-          className="mb-14"
+          className="mb-10 sm:mb-12 md:mb-14"
         />
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
           {NEWS_ITEMS.map((item) => (
             <article
               key={item.id}
               className="border border-[#ececec] bg-white"
             >
-              <div className="relative h-72 w-full overflow-hidden">
+              <div className="relative h-56 w-full overflow-hidden sm:h-64 md:h-72">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -33,18 +33,18 @@ export default function NewsSection() {
                 />
               </div>
 
-              <div className="p-5">
-                <p className="text-[1.6rem] font-light uppercase leading-none text-ssa-primary">
+              <div className="p-4 sm:p-5">
+                <p className="text-[1.35rem] font-light uppercase leading-none text-ssa-primary sm:text-[1.5rem] md:text-[1.6rem]">
                   {item.category}
                 </p>
 
-                <p className="mt-5 text-[1rem] leading-8 text-ssa-ink/85">
+                <p className="mt-4 text-sm leading-6 text-ssa-ink/85 sm:text-[0.95rem] sm:leading-7 md:mt-5 md:text-[1rem] md:leading-8">
                   {item.summary}
                 </p>
 
                 <Link
                   href={item.href}
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-ssa-primary hover:underline"
+                  className="mt-5 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wide text-ssa-primary hover:underline sm:text-sm md:mt-6"
                 >
                   <span aria-hidden="true">»</span>
                   Ver más
@@ -55,5 +55,4 @@ export default function NewsSection() {
         </div>
       </div>
     </section>
-  );
-}
+  )}
