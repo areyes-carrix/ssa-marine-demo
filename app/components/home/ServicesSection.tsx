@@ -1,31 +1,29 @@
 import Image from "next/image";
 import { SERVICES } from "@/app/lib/services";
+import SectionHeader from "@/app/components/home/SectionHeader";
 
 export default function ServicesSection() {
   return (
     <section
-      className="bg-ssa-subtle py-section"
+      className="bg-[#efefef] py-16 md:py-20"
       aria-labelledby="services-heading"
     >
       <div className="mx-auto max-w-ssa px-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-ssa-primary">
-          Nuestros servicios
-        </p>
-
-        <h2
+        <SectionHeader
           id="services-heading"
-          className="mt-3 font-display text-3xl font-bold text-ssa-ink md:text-5xl"
-        >
-          Soluciones portuarias especializadas
-        </h2>
+          lines={["NUESTROS", "SERVICIOS"]}
+          greenLineIndexes={[1]}
+          centered={false}
+          className="mb-12"
+        />
 
-        <div className="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
           {SERVICES.map((service) => (
             <article
               key={service.id}
-              className="overflow-hidden bg-white shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
+              className="overflow-hidden border border-[#ececec] bg-white"
             >
-              <div className="relative h-56 w-full">
+              <div className="relative h-72 w-full overflow-hidden">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -36,10 +34,11 @@ export default function ServicesSection() {
               </div>
 
               <div className="p-6">
-                <h3 className="font-display text-2xl font-semibold text-ssa-ink">
+                <h3 className="text-[2rem] font-light uppercase leading-none text-ssa-primary">
                   {service.title}
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-ssa-ink/80">
+
+                <p className="mt-4 text-[0.95rem] leading-7 text-ssa-ink/70">
                   {service.description}
                 </p>
               </div>

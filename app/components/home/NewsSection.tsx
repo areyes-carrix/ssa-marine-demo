@@ -1,58 +1,55 @@
+import Image from "next/image";
 import Link from "next/link";
 import { NEWS_ITEMS } from "@/app/lib/news";
+import SectionHeader from "@/app/components/home/SectionHeader";
 
 export default function NewsSection() {
   return (
     <section
-      className="bg-ssa-subtle py-section"
+      className="bg-[#efefef] py-16 md:py-20"
       aria-labelledby="news-heading"
     >
       <div className="mx-auto max-w-ssa px-6">
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-ssa-primary">
-              Noticias
-            </p>
-            <h2
-              id="news-heading"
-              className="mt-3 font-display text-3xl font-bold text-ssa-ink md:text-5xl"
-            >
-              Últimas noticias
-            </h2>
-          </div>
+        <SectionHeader
+          id="news-heading"
+          lines={["NOTICIAS RECIENTES"]}
+          centered={true}
+          className="mb-14"
+        />
 
-          <Link
-            href="/noticias"
-            className="text-sm font-semibold uppercase tracking-wide text-ssa-primary transition-colors hover:text-ssa-ink"
-          >
-            Ver todas
-          </Link>
-        </div>
-
-        <div className="mt-10 grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3">
           {NEWS_ITEMS.map((item) => (
             <article
               key={item.id}
-              className="border border-black/5 bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
+              className="border border-[#ececec] bg-white"
             >
-              <p className="text-xs font-semibold uppercase tracking-wide text-ssa-primary">
-                {item.date}
-              </p>
+              <div className="relative h-72 w-full overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
 
-              <h3 className="mt-3 font-display text-2xl font-semibold leading-snug text-ssa-ink">
-                {item.title}
-              </h3>
+              <div className="p-5">
+                <p className="text-[1.6rem] font-light uppercase leading-none text-ssa-primary">
+                  {item.category}
+                </p>
 
-              <p className="mt-4 text-sm leading-7 text-ssa-ink/80">
-                {item.summary}
-              </p>
+                <p className="mt-5 text-[1rem] leading-8 text-ssa-ink/85">
+                  {item.summary}
+                </p>
 
-              <Link
-                href={item.href}
-                className="mt-6 inline-block text-sm font-semibold uppercase tracking-wide text-ssa-primary transition-colors hover:text-ssa-ink"
-              >
-                Leer más
-              </Link>
+                <Link
+                  href={item.href}
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-ssa-primary hover:underline"
+                >
+                  <span aria-hidden="true">»</span>
+                  Ver más
+                </Link>
+              </div>
             </article>
           ))}
         </div>
