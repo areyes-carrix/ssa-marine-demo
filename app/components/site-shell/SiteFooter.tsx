@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BASE_PATH } from "@/app/lib/base-path";
 
 const SOCIAL = [
-  { src: "/ssa/home/assets/images/misc/1.png", label: "Facebook", href: "#" },
-  { src: "/ssa/home/assets/images/misc/2.png", label: "Twitter", href: "#" },
-  { src: "/ssa/home/assets/images/misc/3.png", label: "LinkedIn", href: "#" },
-  { src: "/ssa/home/assets/images/misc/4.png", label: "YouTube", href: "#" },
+  { src: `${BASE_PATH}/ssa/home/assets/images/misc/1.png`, label: "Facebook", href: "#" },
+  { src: `${BASE_PATH}/ssa/home/assets/images/misc/2.png`, label: "Twitter", href: "#" },
+  { src: `${BASE_PATH}/ssa/home/assets/images/misc/3.png`, label: "LinkedIn", href: "#" },
+  { src: `${BASE_PATH}/ssa/home/assets/images/misc/4.png`, label: "YouTube", href: "#" },
 ];
 
 const EXTERNAL_LINKS = [
@@ -29,7 +30,7 @@ export default function SiteFooter() {
       <div className="mx-auto grid max-w-ssa gap-8 px-6 py-10 sm:gap-10 sm:py-12 md:grid-cols-[1.2fr_1fr_0.9fr] md:py-14">
         <div className="flex flex-col gap-4 sm:gap-5">
           <Image
-            src="/ssa/home/assets/images/eco-logo-area/logo.png"
+            src={`${BASE_PATH}/ssa/home/assets/images/eco-logo-area/logo.png`}
             alt="SSA Marine México"
             width={200}
             height={50}

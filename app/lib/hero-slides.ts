@@ -5,8 +5,9 @@ export type HeroSlide = {
     description: string;
     href: string;
   };
-  
-  const IMG = "/ssa/home/assets/images/eco-slider-area-start";
+
+  import { BASE_PATH } from "@/app/lib/base-path";
+  const IMG = `${BASE_PATH}/ssa/home/assets/images/eco-slider-area-start`;
   
   export const HERO_SLIDES: HeroSlide[] = [
     {

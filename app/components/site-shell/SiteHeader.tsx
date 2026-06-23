@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "./MobileNav";
 import HeaderScrollWatcher from "./HeaderScrollWatcher";
+import { BASE_PATH } from "@/app/lib/base-path";
 
 export const NAV_ITEMS = [
   { href: "/", label: "Inicio" },
@@ -32,7 +33,7 @@ export default function SiteHeader() {
             className="flex items-center"
           >
             <Image
-              src="/ssa/home/assets/images/eco-logo-area/logo.png"
+              src={`${BASE_PATH}/ssa/home/assets/images/eco-logo-area/logo.png`}
               alt="SSA Marine México"
               width={190}
               height={44}

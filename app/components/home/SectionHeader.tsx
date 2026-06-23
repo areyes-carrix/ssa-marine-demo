@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import { BASE_PATH } from "@/app/lib/base-path";
 type SectionHeaderProps = {
   id: string;
   lines: string[];
@@ -27,7 +27,7 @@ export default function SectionHeader({
     >
       <div className="flex justify-start pt-1">
         <Image
-          src="/ssa/home/assets/images/misc/ship-icon.png"
+          src={`${BASE_PATH}/ssa/home/assets/images/misc/ship-icon.png`}
           alt=""
           width={40}
           height={40}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import SectionHeader from "@/app/components/home/SectionHeader";
-
+import { BASE_PATH } from "@/app/lib/base-path";
 const COUNTRIES = [
   "Canadá",
   "Chile",
@@ -47,7 +47,7 @@ export default function AboutSection() {
           {/* Image moved earlier on mobile for better flow */}
           <div className="relative mt-5 overflow-hidden lg:hidden">
             <Image
-              src="/ssa/home/assets/images/eco-single-about-image/about-1.jpg"
+              src={`${BASE_PATH}/ssa/home/assets/images/eco-single-about-image/about-1.jpg`}
               alt="Operación portuaria SSA Marine México"
               width={700}
               height={520}
@@ -91,7 +91,7 @@ export default function AboutSection() {
         {/* Desktop image stays on the right */}
         <div className="relative hidden overflow-hidden lg:block">
           <Image
-            src="/ssa/home/assets/images/eco-single-about-image/about-1.jpg"
+            src={`${BASE_PATH}/ssa/home/assets/images/eco-single-about-image/about-1.jpg`}
             alt="Operación portuaria SSA Marine México"
             width={700}
             height={520}
