@@ -33,7 +33,7 @@ export default function SiteHeader() {
             className="flex items-center"
           >
             <Image
-              src={`${BASE_PATH}/ssa/home/assets/images/eco-logo-area/logo.png`}
+              src={`${BASE_PATH}/ssa/home/assets/images/misc/logo.png`}
               alt="SSA Marine México"
               width={190}
               height={44}
