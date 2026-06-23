@@ -23,7 +23,7 @@ export default function StatsSection() {
       <div className="relative mt-5 overflow-hidden sm:mt-6">
         <div className="absolute inset-0">
           <Image
-            src={`${BASE_PATH}/ssa/home/assets/images/eco-slider-area-start/slider-4.jpg`}
+            src={`${BASE_PATH}/ssa/home/assets/images/eco-slider-area-start/slider-4.webp`}
             alt=""
             fill
             sizes="100vw"

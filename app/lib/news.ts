@@ -17,7 +17,7 @@ export const NEWS_ITEMS: NewsItem[] = [
       "El Ro-Ro más grande del mundo arriba a la TEA. El pasado 30 de mayo de 2026, la Terminal Especializada de Automóviles recibió por primera vez al buque GLOVIS LEADER.",
     href: "#",
     date: "Actualidad",
-    image: `${BASE_PATH}/ssa/home/assets/images/eco-single-about-image/about-1.jpg`,
+    image: `${BASE_PATH}/ssa/home/assets/images/eco-single-about-image/about-1.webp`,
     category: "LAZARO CARDENAS",
   },
   {
@@ -27,7 +27,7 @@ export const NEWS_ITEMS: NewsItem[] = [
       "Manuel Fernández Pérez asume la presidencia de ASTOM en una etapa clave para la asociación de terminales y operadores portuarios.",
     href: "#",
     date: "Actualidad",
-    image: `${BASE_PATH}/ssa/home/assets/images/eco-single-about-image/about-2.jpg`,
+    image: `${BASE_PATH}/ssa/home/assets/images/eco-single-about-image/about-2.webp`,
     category: "CORPORATIVO",
   },
   {
@@ -37,7 +37,7 @@ export const NEWS_ITEMS: NewsItem[] = [
       "Aviso importante de seguridad por suplantación de identidad. Se detectó la circulación de mensajes fraudulentos vía WhatsApp y Telegram.",
     href: "#",
     date: "Actualidad",
-    image: `${BASE_PATH}/ssa/home/assets/images/eco-single-about-image/about-3.jpg`,
+    image: `${BASE_PATH}/ssa/home/assets/images/eco-single-about-image/about-3.webp`,
     category: "CORPORATIVO",
   },
 ];
