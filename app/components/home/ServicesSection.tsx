@@ -33,15 +33,15 @@ export default function ServicesSection() {
       />
     </div>
 
-    <div className="p-4 sm:p-5 md:p-6">
-      <h3 className="text-[1.5rem] font-light uppercase leading-none text-ssa-primary sm:text-[1.75rem] md:text-[2rem]">
-        {service.title}
-      </h3>
+    <div className="px-4 pb-4 pt-2 sm:px-5 sm:pb-5 sm:pt-3 md:p-6">
+  <h3 className="text-[1.2rem] font-light uppercase leading-none text-ssa-primary sm:text-[1.45rem] md:text-[1.8rem]">
+    {service.title}
+  </h3>
 
-      <p className="mt-3 text-sm leading-6 text-ssa-ink/70 sm:text-[0.95rem] sm:leading-7">
-        {service.description}
-      </p>
-    </div>
+  <p className="mt-3 text-sm leading-6 text-ssa-ink/70 sm:text-[0.95rem] sm:leading-7">
+    {service.description}
+  </p>
+</div>
   </article>
 ))}
         </div>
