@@ -75,6 +75,12 @@ export default function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
     }
   };
 
+  const nextIndex = (active + 1) % count;
+  
+if (count === 0) {
+  return null;
+}
+
   return (
     <section
       ref={sectionRef}
@@ -88,8 +94,15 @@ export default function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
       onBlur={onBlur}
       className="relative w-full overflow-hidden bg-ssa-ink min-h-[600px] md:min-h-screen"
     >
-      {slides.map((slide, i) => {
-        const isActive = i === active;
+      
+{slides.map((slide, i) => {
+  const isActive = i === active;
+  const shouldRender = i === active || i === nextIndex;
+
+  if (!shouldRender) {
+    return null;
+  }
+
         return (
           <div
             key={slide.id}
