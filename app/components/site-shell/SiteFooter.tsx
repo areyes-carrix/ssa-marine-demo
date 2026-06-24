@@ -30,7 +30,7 @@ export default function SiteFooter() {
       <div className="mx-auto grid max-w-ssa gap-8 px-6 py-10 sm:gap-10 sm:py-12 md:grid-cols-[1.2fr_1fr_0.9fr] md:py-14">
         <div className="flex flex-col gap-4 sm:gap-5">
           <Image
-            src={`${BASE_PATH}/ssa/home/assets/images/eco-logo-area/logo.png`}
+            src={`${BASE_PATH}/ssa/home/assets/images/misc/logo.png`}
             alt="SSA Marine México"
             width={200}
             height={50}

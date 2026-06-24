@@ -81,7 +81,7 @@ export default function AboutSection() {
           </div>
 
           <Link
-            href="/nosotros"
+            href="/about"
             className="mt-5 inline-block bg-ssa-primary px-5 py-2 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-ssa-ink"
           >
             Ver más
