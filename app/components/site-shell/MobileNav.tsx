@@ -1,10 +1,12 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 type Item = { href: string; label: string };
 
 export default function MobileNav({ items }: { items: readonly Item[] }) {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -113,8 +115,16 @@ export default function MobileNav({ items }: { items: readonly Item[] }) {
                 href={item.href}
                 ref={i === 0 ? firstLinkRef : undefined}
                 onClick={() => setOpen(false)}
-                className="font-display text-xl font-medium text-ssa-surface hover:text-ssa-primary"
-              >
+                className={[
+                  "font-display text-xl font-medium",
+                  (
+                    item.href === "/"
+                      ? pathname === "/"
+                      : pathname.startsWith(item.href)
+                  )
+                    ? "text-ssa-primary"
+                    : "text-ssa-surface hover:text-ssa-primary",
+                ].join(" ")}     >
                 {item.label}
               </Link>
             ))}
