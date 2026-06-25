@@ -3,7 +3,7 @@ export const lazaroCardenasData = {
   hero: {
     title: "Puerto de Lázaro Cárdenas",
     backgroundImage:
-      "/ssa/lazaro-cardenas/assets/images/eco-breadcum-area-start/breadcum-LZC.jpg",
+       `${BASE_PATH}/ssa/lazaro-cardenas/assets/images/eco-breadcum-area-start/breadcum-LZC.jpg`,
     breadcrumbs: [
       { label: "Inicio", href: "/" },
       { label: "Lázaro Cárdenas" },

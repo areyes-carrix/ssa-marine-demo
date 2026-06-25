@@ -3,7 +3,7 @@ export const manzanilloData = {
     hero: {
       title: "Puerto de Manzanillo",
       backgroundImage:
-        "/ssa/manzanillo/assets/images/eco-breadcum-area-start/breadcum-MZN.jpg",
+         `${BASE_PATH}/ssa/manzanillo/assets/images/eco-breadcum-area-start/breadcum-MZN.jpg`,
       breadcrumbs: [
         { label: "Inicio", href: "/" },
         { label: "Manzanillo" },

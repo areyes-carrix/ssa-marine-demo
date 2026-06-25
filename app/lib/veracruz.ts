@@ -3,7 +3,7 @@ export const veracruzData = {
     hero: {
       title: "Puerto de Veracruz",
       backgroundImage:
-        "/ssa/veracruz/assets/images/eco-breadcum-area-start/breadcum-vera.jpg",
+         `${BASE_PATH}/ssa/veracruz/assets/images/eco-breadcum-area-start/breadcum-vera.jpg`,
       breadcrumbs: [
         { label: "Inicio", href: "/" },
         { label: "Veracruz" },

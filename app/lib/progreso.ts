@@ -3,7 +3,7 @@ export const progresoData = {
     hero: {
       title: "Puerto de Progreso",
       backgroundImage:
-        "/ssa/progreso/assets/images/eco-breadcum-area-start/breadcum-pro.jpg",
+         `${BASE_PATH}/ssa/progreso/assets/images/eco-breadcum-area-start/breadcum-pro.jpg`,
       breadcrumbs: [
         { label: "Inicio", href: "/" },
         { label: "Progreso" },

@@ -3,7 +3,7 @@ export const cozumelData = {
     hero: {
       title: "Puerto de Cozumel",
       backgroundImage:
-        "/ssa/cozumel/assets/images/eco-breadcum-area-start/breadcum-coz.jpg",
+         `${BASE_PATH}/ssa/cozumel/assets/images/eco-breadcum-area-start/breadcum-coz.jpg`,
       breadcrumbs: [
         { label: "Inicio", href: "/" },
         { label: "Cozumel" },

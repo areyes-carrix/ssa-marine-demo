@@ -3,7 +3,7 @@ export const tuxpanData = {
     hero: {
       title: "Puerto de Tuxpan",
       backgroundImage:
-        "/ssa/tuxpan/assets/images/eco-breadcum-area-start/breadcum-tux.jpg",
+         `${BASE_PATH}/ssa/tuxpan/assets/images/eco-breadcum-area-start/breadcum-tux.jpg`,
       breadcrumbs: [
         { label: "Inicio", href: "/" },
         { label: "Tuxpan" },
