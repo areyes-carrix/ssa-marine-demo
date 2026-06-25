@@ -10,7 +10,7 @@ export default function PortGallery({
     return (
         <section className="bg-white py-14 md:py-20">
             <div className="mx-auto max-w-ssa px-6 md:px-8">
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                     {images.map((image, index) => (
                         <article
                             key={image}
