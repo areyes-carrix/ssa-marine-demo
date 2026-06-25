@@ -1,33 +1,37 @@
-type NewsCardProps = {
-    title: string;
-    date: string;
-  };
-  
-  export default function NewsCard({
-    title,
-    date,
-  }: NewsCardProps) {
-    return (
-      <article className="bg-white">
-       <div className="relative aspect-[16/9] overflow-hidden bg-neutral-200">
-  <div className="absolute inset-0 bg-gradient-to-br from-neutral-200 via-neutral-300 to-neutral-400" />
+import Image from "next/image";
 
-  <div className="absolute inset-0 flex items-center justify-center">
-    <span className="text-sm font-medium uppercase tracking-widest text-white/80">
-      Noticias
-    </span>
-  </div>
-</div>
-  
-        <div className="pt-4">
-          <h2 className="font-display text-[22px] font-medium leading-tight text-ssa-ink">
-            {title}
-          </h2>
-  
-          <p className="mt-3 text-sm font-medium text-ssa-primary">
-            {date}
-          </p>
-        </div>
-      </article>
-    );
-  }
+type NewsCardProps = {
+  title: string;
+  date: string;
+  image: string;
+};
+
+export default function NewsCard({
+  title,
+  date,
+  image,
+}: NewsCardProps) {
+  return (
+    <article className="bg-white">
+      <div className="relative aspect-[16/9] overflow-hidden">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          className="object-cover"
+        />
+      </div>
+
+      <div className="pt-4">
+        <h2 className="font-display text-[22px] font-medium leading-tight text-ssa-ink">
+          {title}
+        </h2>
+
+        <p className="mt-3 text-sm font-medium text-ssa-primary">
+          {date}
+        </p>
+      </div>
+    </article>
+  );
+}
