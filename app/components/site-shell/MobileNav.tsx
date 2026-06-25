@@ -6,10 +6,7 @@ import { useEffect, useRef, useState } from "react";
 type Item = {
   href?: string;
   label: string;
-  children?: {
-    href: string;
-    label: string;
-  }[];
+  children?: readonly {readonly href: string;  readonly label: string;}[];
 };
 
 export default function MobileNav({ items }: { items: readonly Item[] }) {
