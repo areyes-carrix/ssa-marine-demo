@@ -16,7 +16,7 @@ export default function TerminalInfoSection({
                 <h2 className="mb-10 font-display text-3xl font-medium text-ssa-ink md:text-4xl">
                     Terminal de Cruceros
                 </h2>
-                <div className="grid gap-8 md:grid-cols-3">
+                <div className="mx-auto max-w-[1200px] grid gap-8 md:grid-cols-3">
                     {sections.map((section) => (
                         <article
                             key={section.title}
