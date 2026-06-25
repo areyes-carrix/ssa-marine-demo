@@ -12,19 +12,19 @@ export default function NewsCard({
   image,
 }: NewsCardProps) {
   return (
-    <article className="bg-white">
+  <article className="group bg-white">
       <div className="relative aspect-[16/9] overflow-hidden">
         <Image
           src={image}
           alt={title}
           fill
           sizes="(min-width: 1024px) 50vw, 100vw"
-          className="object-cover"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </div>
 
       <div className="pt-4">
-        <h2 className="font-display text-[22px] font-medium leading-tight text-ssa-ink">
+        <h2 className="font-display text-[20px] font-medium leading-tight text-ssa-ink">
           {title}
         </h2>
 
