@@ -3,11 +3,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
-type Item = { href: string; label: string };
+type Item = {
+  href?: string;
+  label: string;
+  children?: {
+    href: string;
+    label: string;
+  }[];
+};
 
 export default function MobileNav({ items }: { items: readonly Item[] }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [instalacionesOpen, setInstalacionesOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
@@ -94,7 +102,7 @@ export default function MobileNav({ items }: { items: readonly Item[] }) {
             type="button"
             aria-label="Cerrar menú"
             onClick={close}
-           className="self-end inline-flex h-10 w-10 items-center justify-center rounded text-ssa-surface hover:text-ssa-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-ssa-primary"
+            className="self-end inline-flex h-10 w-10 items-center justify-center rounded text-ssa-surface hover:text-ssa-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-ssa-primary"
           >
             <svg
               aria-hidden="true"
@@ -109,25 +117,72 @@ export default function MobileNav({ items }: { items: readonly Item[] }) {
             </svg>
           </button>
           <nav aria-label="Mobile" className="mt-4 flex flex-col gap-4">
-            {items.map((item, i) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                ref={i === 0 ? firstLinkRef : undefined}
-                onClick={() => setOpen(false)}
-                className={[
-                  "font-display text-xl font-medium",
-                  (
-                    item.href === "/"
-                      ? pathname === "/"
-                      : pathname.startsWith(item.href)
-                  )
-                    ? "text-ssa-primary"
-                    : "text-ssa-surface hover:text-ssa-primary",
-                ].join(" ")}     >
-                {item.label}
-              </Link>
-            ))}
+            {items.map((item, i) => {
+              if (item.children) {
+                const active = item.children.some((child) =>
+                  pathname.startsWith(child.href)
+                );
+
+                return (
+                  <div key={item.label}>
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setInstalacionesOpen((v) => !v)
+                      }
+                      className={[
+                        "font-display text-xl font-medium",
+                        active
+                          ? "text-ssa-primary"
+                          : "text-ssa-surface",
+                      ].join(" ")}
+                    >
+                      {item.label}
+                    </button>
+
+                    {instalacionesOpen && (
+                      <div className="mt-3 ml-4 flex flex-col gap-3">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            onClick={() => setOpen(false)}
+                            className={
+                              pathname.startsWith(child.href)
+                                ? "text-ssa-primary"
+                                : "text-ssa-surface hover:text-ssa-primary"
+                            }
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href!}
+                  onClick={() => setOpen(false)}
+
+                  className={[
+                    "font-display text-xl font-medium",
+                    (
+                      item.href === "/"
+                        ? pathname === "/"
+                        : pathname.startsWith(item.href ?? "")
+                    )
+                      ? "text-ssa-primary"
+                      : "text-ssa-surface hover:text-ssa-primary",
+                  ].join(" ")}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
         </div>
       )}

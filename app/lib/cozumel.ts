@@ -1,3 +1,4 @@
+import { BASE_PATH } from "@/app/lib/base-path";
 export const cozumelData = {
     hero: {
       title: "Puerto de Cozumel",
@@ -56,14 +57,14 @@ export const cozumelData = {
       ],
   
     gallery: [
-      "/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-1.jpg",
-      "/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-2.jpg",
-      "/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-3.jpg",
-      "/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-4.jpg",
-      "/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-5.jpg",
-      "/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-6.jpg",
-      "/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-7.jpg",
-      "/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-8.jpg",
-      "/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-9.jpg",
+       `${BASE_PATH}/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-1.jpg`,
+       `${BASE_PATH}/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-2.jpg`,
+       `${BASE_PATH}/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-3.jpg`,
+       `${BASE_PATH}/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-4.jpg`,
+       `${BASE_PATH}/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-5.jpg`,
+       `${BASE_PATH}/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-6.jpg`,
+       `${BASE_PATH}/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-7.jpg`,
+       `${BASE_PATH}/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-8.jpg`,
+       `${BASE_PATH}/ssa/cozumel/assets/images/eco-featured-project-area-start/coz-9.jpg`,
     ],
   };

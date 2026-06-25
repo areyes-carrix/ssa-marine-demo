@@ -1,0 +1,84 @@
+height:25px!important;width:25px!important;padding:1px!important
+
+====================================
+
+height:25px!important;width:25px!important;padding:1px!important
+
+====================================
+
+height:25px!important;width:25px!important;padding:1px!important
+
+====================================
+
+height:25px!important;width:25px!important;padding:1px!important
+
+====================================
+
+text-align:right!important
+
+====================================
+
+height:35px!important;width:35px!important;padding:5px!important
+
+====================================
+
+height:35px!important;width:35px!important;padding:5px!important
+
+====================================
+
+height:35px!important;width:35px!important;padding:5px!important
+
+====================================
+
+height:35px!important;width:35px!important;padding:5px!important
+
+====================================
+
+background:url('assets/image/breadcum/breadcum-tux.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/tux-1.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/tux-2.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/tux-3.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/tux-4.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/tux-5.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/tux-6.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/tux-7.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/tux-8.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/tux-9.jpg') no-repeat scroll center center / cover
+
+====================================
+
+color: #fff;
+
+====================================
+
+display: none
+
+====================================
+

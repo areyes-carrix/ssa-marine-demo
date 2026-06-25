@@ -1,0 +1,96 @@
+height:25px!important;width:25px!important;padding:1px!important
+
+====================================
+
+height:25px!important;width:25px!important;padding:1px!important
+
+====================================
+
+height:25px!important;width:25px!important;padding:1px!important
+
+====================================
+
+height:25px!important;width:25px!important;padding:1px!important
+
+====================================
+
+text-align:right!important
+
+====================================
+
+height:35px!important;width:35px!important;padding:5px!important
+
+====================================
+
+height:35px!important;width:35px!important;padding:5px!important
+
+====================================
+
+height:35px!important;width:35px!important;padding:5px!important
+
+====================================
+
+height:35px!important;width:35px!important;padding:5px!important
+
+====================================
+
+background:url('assets/image/breadcum/breadcum-pro.jpg') no-repeat scroll center center / cover
+
+====================================
+
+color:#999999
+
+====================================
+
+color:#999999
+
+====================================
+
+color:#999999
+
+====================================
+
+background:url('assets/image/projects/pro-1.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/pro-2.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/pro-3.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/pro-4.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/pro-5.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/pro-6.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/pro-7.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/pro-8.jpg') no-repeat scroll center center / cover
+
+====================================
+
+background:url('assets/image/projects/pro-9.jpg') no-repeat scroll center center / cover
+
+====================================
+
+color: #fff;
+
+====================================
+
+display: none
+
+====================================
+

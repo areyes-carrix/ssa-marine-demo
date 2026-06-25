@@ -8,11 +8,22 @@ import { BASE_PATH } from "@/app/lib/base-path";
 export const NAV_ITEMS = [
   { href: "/", label: "Inicio" },
   { href: "/nosotros", label: "Nosotros" },
-  { href: "/instalaciones", label: "Instalaciones" },
-  { href: "/noticias", label: "Noticias" },
-  { href: "/contacto", label: "Contacto" },
-] as const;
 
+  {
+    label: "Instalaciones",
+    children: [
+      { href: "/cozumel", label: "Cozumel" },
+      { href: "/lazaro-cardenas", label: "Lázaro Cárdenas" },
+      { href: "/manzanillo", label: "Manzanillo" },
+      { href: "/progreso", label: "Progreso" },
+      { href: "/tuxpan", label: "Tuxpan" },
+      { href: "/veracruz", label: "Veracruz" },
+    ],
+  },
+
+  { href: "/noticias", label: "Noticias" },
+ // { href: "/contacto", label: "Contacto" },
+] as const;
 const SHOW_LANGUAGE_CTA = "INGLÉS";
 
 export default function SiteHeader() {
